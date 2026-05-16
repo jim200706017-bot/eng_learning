@@ -1,5 +1,9 @@
 {
   "last_updated": "2026-05-16",
-  "daily_pool": {},
-  "srs_queue": []
+  "daily_pool": {
+    "2026-05-16": ["tort"]
+  },
+  "srs_queue": [
+    {"word": "tort", "stage": 0, "next_review": "2026-05-17", "domain": "law"}
+  ]
 }

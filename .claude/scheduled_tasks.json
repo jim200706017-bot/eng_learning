@@ -1,0 +1,31 @@
+{
+  "tasks": [
+    {
+      "id": "d5a6169c",
+      "cron": "0 5 * * *",
+      "prompt": "Beatrice morning news briefing: Execute the english-beatrice skill. Search for today's top news across 4 categories (AI, finance, law, world) using WebSearch with site: filters on techcrunch.com, reuters.com, abajournal.com, bbc.com. Generate a structured briefing markdown file at C:\\Users\\HUAWEI\\Desktop\\AI工具\\英语学习\\V-1.0\\briefings\\ with today's date. Extract 10-15 key vocabulary words with CEFR levels into a daily word pool.",
+      "createdAt": 1778920347001,
+      "recurring": true,
+      "createdBySessionId": "87bc8da2-a7d5-434f-8b87-f2184ff0534e",
+      "createdByPid": 7320
+    },
+    {
+      "id": "e263f476",
+      "cron": "0 8 * * *",
+      "prompt": "Victoria morning SRS check: Read C:\\Users\\HUAWEI\\Desktop\\AI工具\\英语学习\\V-1.0\\review\\schedule.json and C:\\Users\\HUAWEI\\Desktop\\AI工具\\英语学习\\V-1.0\\vocabulary\\index.json. Find all words where srs_next is today or earlier. Display a morning report: greet JIMMY, show number of words due for review, show today's briefing availability, and recommend next action (/briefing or /study or /speak).",
+      "createdAt": 1778920347085,
+      "recurring": true,
+      "createdBySessionId": "87bc8da2-a7d5-434f-8b87-f2184ff0534e",
+      "createdByPid": 7320
+    },
+    {
+      "id": "a302c568",
+      "cron": "0 22 * * *",
+      "prompt": "Victoria evening learning summary: Read C:\\Users\\HUAWEI\\Desktop\\AI工具\\英语学习\\V-1.0\\stats\\progress.json and today's sessions files. Generate a brief evening summary: words studied today, speaking practice completed, streak status. Update stats/progress.json with today's activity. Encourage JIMMY for tomorrow.",
+      "createdAt": 1778920349138,
+      "recurring": true,
+      "createdBySessionId": "87bc8da2-a7d5-434f-8b87-f2184ff0534e",
+      "createdByPid": 7320
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "exam": "CET-4",
+  "date": "2026-06-13",
+  "days_remaining": 28,
+  "start_date": "2026-05-17",
+  "target_score": "pass with merit",
+  "weekly_plan": {
+    "week_1": {
+      "dates": "2026-05-17 ~ 2026-05-23",
+      "theme": "词汇地基 + 听力启蒙",
+      "daily": {
+        "vocabulary": "25 CET-4 核心词 via Edmund (目标 175 词/周)",
+        "listening": "1 篇 Beatrice 慢速简报片段 (1-2 min), 3 遍精听",
+        "speaking": "Charlie Stage 1-2 控制式对话, 话题关联简报",
+        "weekend": "周六复习本周词汇, 周日 1 套 CET-4 听力真题"
+      }
+    },
+    "week_2": {
+      "dates": "2026-05-24 ~ 2026-05-30",
+      "theme": "阅读强化 + 听力提速",
+      "daily": {
+        "vocabulary": "25 词 (目标 350 词累计)",
+        "reading": "1 篇 CET-4 真题阅读 (15 min 限时) + 精读分析",
+        "listening": "常速 BBC/VOA 1 篇, 无字幕练习",
+        "speaking": "Charlie Stage 2-3, 就阅读文章展开讨论"
+      }
+    },
+    "week_3": {
+      "dates": "2026-05-31 ~ 2026-06-06",
+      "theme": "写作翻译 + 综合训练",
+      "daily": {
+        "vocabulary": "15 词 (重点: 写作高频词)",
+        "writing": "1 篇 CET-4 作文 (30 min 限时) → 自我修正 → Edmund 批改",
+        "translation": "1 段中译英 (CET-4 真题)",
+        "speaking": "Charlie 模拟 CET-4 口语题型"
+      }
+    },
+    "week_4": {
+      "dates": "2026-06-07 ~ 2026-06-12",
+      "theme": "全真模考 + 查漏补缺",
+      "daily": {
+        "mock_exam": "隔天 1 套完整 CET-4 真题 (2h 限时)",
+        "review": "错题回顾 + 弱点词汇集中突破",
+        "listening": "每日 1 套听力保持状态",
+        "relax": "Charlie 自由对话减压"
+      }
+    }
+  },
+  "key_resources": {
+    "vocabulary": "CET-4 核心 4500 词, Edmund 每日按频次推送",
+    "listening": "BBC 6 Minute English / VOA Special → 常速过渡",
+    "reading": "CET-4 真题阅读 2016-2025",
+    "writing": "10 大模板句型 + 范文精读",
+    "mock": "近 5 年 CET-4 真题套卷"
+  },
+  "daily_schedule": {
+    "morning": "08:00 Beatrice 简报 + TTS 听力 (15 min)",
+    "lunch": "Edmund 查词 10-15 词 (15 min)",
+    "evening": "Charlie 口语 + 阅读/写作 (30-45 min)",
+    "before_bed": "SRS 复习 + 反思记录 (10 min)"
+  }
+}

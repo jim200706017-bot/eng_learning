@@ -1,0 +1,17 @@
+{
+  "date": "2026-05-16",
+  "words": [
+    {"word": "testify", "domain": "law", "cefr": "B2", "source_article": "Musk-OpenAI Testimony", "url": "https://techcrunch.com/2026/05/12/musk-mulled-handing-openai-to-his-children-altman-testifies/"},
+    {"word": "equity", "domain": "law/finance", "cefr": "B2", "source_article": "OpenAI Corporate Structure", "url": "https://techcrunch.com/2026/05/12/musk-mulled-handing-openai-to-his-children-altman-testifies/"},
+    {"word": "liability", "domain": "law/finance", "cefr": "B2", "source_article": "Lime IPO Risk Factors", "url": "https://mobility.techcrunch.com/p/an-unexpected-ipo"},
+    {"word": "precedent", "domain": "law", "cefr": "C1", "source_article": "Musk vs Altman Case", "url": "https://techcrunch.com/2026/05/14/what-the-jury-will-actually-decide-in-the-case-of-elon-musk-vs-sam-altman/"},
+    {"word": "autonomous", "domain": "tech", "cefr": "B2", "source_article": "Kodiak AI, Nuro", "url": "https://techcrunch.com"},
+    {"word": "governance", "domain": "law/tech", "cefr": "C1", "source_article": "AI Governance Implications", "url": "https://techcrunch.com/2026/05/14/what-the-jury-will-actually-decide-in-the-case-of-elon-musk-vs-sam-altman/"},
+    {"word": "stipend", "domain": "law", "cefr": "C1", "source_article": "BigLaw Summer Program", "url": "https://www.abajournal.com/news/article/biglaw-firm-commits-nearly-1m-to-summer-associates-nonprofits-in-new-program"},
+    {"word": "nonprofit", "domain": "law", "cefr": "A2", "source_article": "Wilson Sonsini Initiative", "url": "https://www.abajournal.com/news/article/biglaw-firm-commits-nearly-1m-to-summer-associates-nonprofits-in-new-program"},
+    {"word": "jury", "domain": "law", "cefr": "B2", "source_article": "Musk vs Altman Jury Trial", "url": "https://techcrunch.com/2026/05/14/what-the-jury-will-actually-decide-in-the-case-of-elon-musk-vs-sam-altman/"},
+    {"word": "deceptive", "domain": "law", "cefr": "C1", "source_article": "Deceptive Practices Claim", "url": "https://techcrunch.com/2026/05/12/musk-mulled-handing-openai-to-his-children-altman-testifies/"},
+    {"word": "valuation", "domain": "finance", "cefr": "C1", "source_article": "Kodiak AI Markdown", "url": "https://techcrunch.com"},
+    {"word": "commercialization", "domain": "business", "cefr": "C1", "source_article": "OpenAI For-Profit Shift", "url": "https://techcrunch.com/2026/05/14/what-the-jury-will-actually-decide-in-the-case-of-elon-musk-vs-sam-altman/"}
+  ]
+}

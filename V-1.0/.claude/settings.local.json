@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx @playwright/mcp@latest --help)",
+      "Bash(npx playwright *)",
+      "Bash(PLAYWRIGHT_DOWNLOAD_HOST=https://npmmirror.com/mirrors/playwright/ npx playwright *)",
+      "Bash(PLAYWRIGHT_BROWSERS_PATH=* npx playwright *)",
+      "Bash(npx playwright install *)",
+      "Bash(npx playwright show-trace *)",
+      "Bash(where chrome *)",
+      "Bash(where chrome.exe)",
+      "Bash(where \"C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\")",
+      "Bash(where \"C:\\\\Program Files \\(x86\\)\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe\")",
+      "Bash(pwsh *)",
+      "Bash(powershell *)",
+      "ReadFile(*)"
+    ]
+  },
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest", "--executable-path", "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"],
+      "env": {
+        "PLAYWRIGHT_DOWNLOAD_HOST": "https://npmmirror.com/mirrors/playwright/"
+      }
+    },
+    "edge-tts": {
+      "command": "C:\\Users\\HUAWEI\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "args": ["mcp/edge_tts_server.py"],
+      "env": {}
+    }
+  }
+}

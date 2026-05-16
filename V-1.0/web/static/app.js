@@ -88,7 +88,10 @@ function hideTyping() {
 }
 
 async function sendMessage(text) {
-  if (!text.trim()) return;
+  if (!text || !text.trim()) {
+    msgInput.value = '';
+    return;
+  }
   addMessage(text, 'user');
   msgInput.value = '';
   msgInput.style.height = 'auto';

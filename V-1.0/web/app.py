@@ -27,7 +27,7 @@ CONFIG_DIR = ROOT / "config"
 # ── LLM Config ───────────────────────────────────────────────────────
 API_BASE = os.getenv("ANTHROPIC_BASE_URL", "https://api.deepseek.com/anthropic")
 API_KEY = os.getenv("ANTHROPIC_AUTH_TOKEN", "")
-MODEL = os.getenv("ANTHROPIC_MODEL", "deepseek-v4-flash[1m]")
+MODEL = os.getenv("ANTHROPIC_MODEL", "deepseek-v4-flash[1m]").split("[")[0].strip()
 
 # ── Agent definitions ─────────────────────────────────────────────────
 AGENTS = {
@@ -140,7 +140,24 @@ async def chat(req: ChatRequest):
     messages.append({"role": "user", "content": req.message})
 
     try:
+        # DeepSeek API: system prompt as top-level param, not in messages array
+        system_msg = ""
+        api_messages = []
+        for m in messages:
+            if m["role"] == "system":
+                system_msg += m["content"] + "\n"
+            else:
+                api_messages.append(m)
+
         async with httpx.AsyncClient(timeout=60.0) as client:
+            body = {
+                "model": MODEL,
+                "max_tokens": 1024,
+            }
+            if system_msg.strip():
+                body["system"] = system_msg.strip()
+            body["messages"] = api_messages
+
             resp = await client.post(
                 f"{API_BASE}/messages",
                 headers={
@@ -148,13 +165,13 @@ async def chat(req: ChatRequest):
                     "anthropic-version": "2023-06-01",
                     "content-type": "application/json",
                 },
-                json={
-                    "model": MODEL,
-                    "max_tokens": 1024,
-                    "messages": messages,
-                },
+                json=body,
             )
             data = resp.json()
+            if resp.status_code != 200:
+                error_msg = data.get("error", {}).get("message", str(data))
+                raise HTTPException(502, f"LLM API error: {error_msg}")
+
             reply_text = ""
             for block in data.get("content", []):
                 if block.get("type") == "text":

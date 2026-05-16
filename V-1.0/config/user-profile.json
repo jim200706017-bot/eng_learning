@@ -1,0 +1,74 @@
+{
+  "name": "JIMMY",
+  "profession": "大一法学生 (五院四系, 大陆法系)",
+  "interests": [
+    "哲学",
+    "政治学",
+    "心理学",
+    "法学",
+    "AI科技",
+    "金融经济学",
+    "健身",
+    "体育",
+    "音乐"
+  ],
+  "english_goals": [
+    "培养英语母语者思维",
+    "处理法学普通法系涉外法律英语问题",
+    "CET-4 (2026-06-13)",
+    "IELTS (2027 寒假)",
+    "CET-6 (2027 寒假)",
+    "AI / 财会英语证书"
+  ],
+  "cefr_levels": {
+    "general": "B2",
+    "legal": "A2",
+    "tech": "C1",
+    "academic": null
+  },
+  "ielts_history": {
+    "year": 2021,
+    "age": 16,
+    "overall": 6.0,
+    "listening": 6.5,
+    "writing": 6.5,
+    "reading": 6.0,
+    "speaking": 5.5
+  },
+  "preferred_accent": "us",
+  "daily_briefing_time": "08:00",
+  "news_categories_priority": ["ai", "finance", "law", "world"],
+  "vocabulary_daily_goal": 12,
+  "study_time_per_day": "30-60min",
+  "charlie_conversation_style": [
+    "casual",
+    "guided",
+    "deep",
+    "humorous"
+  ],
+  "error_correction": "both",
+  "upcoming_exams": [
+    {
+      "name": "CET-4",
+      "date": "2026-06-13",
+      "focus": ["vocabulary", "listening"]
+    },
+    {
+      "name": "IELTS",
+      "date": "2027-01",
+      "focus": ["all"]
+    },
+    {
+      "name": "CET-6",
+      "date": "2027-01",
+      "focus": ["vocabulary", "reading"]
+    }
+  ],
+  "fitness_profile": {
+    "weight_kg": 110,
+    "goals": ["增肌"],
+    "sports": ["排球", "足球", "羽毛球", "台球斯诺克"]
+  },
+  "music_interests": ["钢琴", "笛子", "音乐制作"],
+  "lifestyle_philosophy": "我是一个完整的人，对一切保持好奇。AI 的边界是提高学习效率，让我有更多时间凭兴趣探索。时间分成两部分：不得不花时间的 + 凭兴趣探索的。"
+}

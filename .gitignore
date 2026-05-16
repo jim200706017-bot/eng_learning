@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Temp files
+*.mp3
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+
+# System
+Thumbs.db
+Desktop.ini
+
+# Sensitive
+*.env
+.env*

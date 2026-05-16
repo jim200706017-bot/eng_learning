@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY)",
+      "Bash(pip install *)",
+      "Bash(NO_PROXY=\"*\" no_proxy=\"*\" pip install edge-tts --index-url https://pypi.org/simple)",
+      "Bash(cmd.exe *)",
+      "Bash(pip config *)",
+      "WebFetch",
+      "WebSearch",
+      "Bash(python *)",
+      "Bash(NO_PROXY=\"*\" no_proxy=\"*\" pip install *)",
+      "Read(C:\\Users\\HUAWEI\\Desktop\\AI工具\\英语学习\\**)",
+      "Write(C:\\Users\\HUAWEI\\Desktop\\AI工具\\英语学习\\**)",
+      "Edit(C:\\Users\\HUAWEI\\Desktop\\AI工具\\英语学习\\**)",
+      "Bash(where python *)",
+      "Bash(pip list *)",
+      "Bash(findstr edge *)",
+      "Bash(pip3 install *)",
+      "Bash(\"C:\\\\Users\\\\HUAWEI\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python311\\\\python.exe\" 'C:\\\\Users\\\\HUAWEI\\\\Desktop\\\\AI工具\\\\英语学习\\\\V-1.0\\\\mcp\\\\edge_tts_server.py')",
+      "Bash(npx *)",
+      "Bash(gh auth *)",
+      "Bash(gh api *)",
+      "Bash(git --version)",
+      "Bash(where git *)",
+      "Bash(git add *)"
+    ]
+  },
+  "mcpServers": {
+    "edge-tts": {
+      "command": "C:\\Users\\HUAWEI\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "args": [
+        "C:\\Users\\HUAWEI\\Desktop\\AI工具\\英语学习\\V-1.0\\mcp\\edge_tts_server.py"
+      ],
+      "env": {}
+    }
+  }
+}

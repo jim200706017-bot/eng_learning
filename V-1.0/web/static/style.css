@@ -1,0 +1,429 @@
+/* ── Gmail-style English Secretary ──────────────────────────────── */
+
+:root {
+  --sidebar-bg: #f6f8fc;
+  --sidebar-width: 220px;
+  --topbar-height: 56px;
+  --primary: #1a73e8;
+  --primary-light: #e8f0fe;
+  --text: #202124;
+  --text-secondary: #5f6368;
+  --border: #dadce0;
+  --bg: #ffffff;
+  --hover: #e8eaed;
+  --msg-user-bg: #e8f0fe;
+  --msg-agent-bg: #f1f3f4;
+  --shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg);
+  height: 100vh;
+  overflow: hidden;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ── Top Bar ────────────────────────────────────────────────────── */
+#topbar {
+  height: var(--topbar-height);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+#brand {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+#top-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+#sync-status {
+  font-size: 12px;
+  color: var(--text-secondary);
+  background: var(--sidebar-bg);
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+#top-actions button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 50%;
+  transition: background 0.2s;
+  line-height: 1;
+}
+
+#top-actions button:hover {
+  background: var(--hover);
+}
+
+/* ── Main Layout ────────────────────────────────────────────────── */
+#main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ── Sidebar ────────────────────────────────────────────────────── */
+#sidebar {
+  width: var(--sidebar-width);
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+#agents-list {
+  padding: 8px 0;
+  flex: 1;
+}
+
+.agent-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+  margin-right: 8px;
+  transition: background 0.15s;
+  gap: 12px;
+}
+
+.agent-item:hover {
+  background: var(--hover);
+}
+
+.agent-item.active {
+  background: var(--primary-light);
+  font-weight: 500;
+}
+
+.agent-item.active .agent-name {
+  color: var(--primary);
+}
+
+.agent-icon {
+  font-size: 20px;
+  width: 28px;
+  text-align: center;
+}
+
+.agent-name {
+  font-size: 14px;
+  flex: 1;
+}
+
+.agent-title {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+#sidebar-footer {
+  padding: 12px 16px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* ── Chat Area ──────────────────────────────────────────────────── */
+#chat-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+#chat-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--border);
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+#current-agent {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#current-agent-title {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+#voice-indicator {
+  margin-left: auto;
+  font-size: 12px;
+  color: #34a853;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ── Messages ───────────────────────────────────────────────────── */
+#messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.message {
+  max-width: 80%;
+  padding: 10px 16px;
+  border-radius: 18px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.message.user {
+  align-self: flex-end;
+  background: var(--msg-user-bg);
+  border-bottom-right-radius: 4px;
+}
+
+.message.agent {
+  align-self: flex-start;
+  background: var(--msg-agent-bg);
+  border-bottom-left-radius: 4px;
+}
+
+.message.system {
+  align-self: center;
+  background: none;
+  font-size: 12px;
+  color: var(--text-secondary);
+  max-width: 100%;
+  text-align: center;
+}
+
+/* ── Input Area ─────────────────────────────────────────────────── */
+#input-area {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 12px 24px;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+  flex-shrink: 0;
+}
+
+#msg-input {
+  flex: 1;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: none;
+  outline: none;
+  max-height: 120px;
+  line-height: 1.4;
+  transition: border-color 0.2s;
+}
+
+#msg-input:focus {
+  border-color: var(--primary);
+}
+
+#btn-voice, #btn-send {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.2s;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+#btn-voice:hover, #btn-send:hover {
+  background: var(--hover);
+}
+
+#btn-voice.listening {
+  color: #ea4335;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+/* ── Right Panel ────────────────────────────────────────────────── */
+#right-panel {
+  width: 380px;
+  border-left: 1px solid var(--border);
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+#right-panel.hidden {
+  display: none;
+}
+
+#panel-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  gap: 8px;
+}
+
+#panel-title {
+  font-size: 14px;
+  font-weight: 500;
+  flex: 1;
+}
+
+#panel-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+#panel-close:hover { background: var(--hover); }
+
+#panel-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+/* Vocabulary table */
+.vocab-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.vocab-table th {
+  text-align: left;
+  padding: 8px 6px;
+  border-bottom: 2px solid var(--border);
+  font-weight: 500;
+  color: var(--text-secondary);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+}
+
+.vocab-table td {
+  padding: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.vocab-table tr:hover td {
+  background: var(--sidebar-bg);
+}
+
+.status-productive { color: #34a853; font-weight: 500; }
+.status-receptive { color: #ea4335; }
+
+/* Briefing content */
+.briefing-content {
+  font-size: 13px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.stat-card {
+  background: var(--sidebar-bg);
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-card .stat-value {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.stat-card .stat-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #bbb; }
+
+/* ── Typing indicator ───────────────────────────────────────────── */
+.typing-indicator {
+  align-self: flex-start;
+  padding: 12px 20px;
+  background: var(--msg-agent-bg);
+  border-radius: 18px;
+  border-bottom-left-radius: 4px;
+  display: flex;
+  gap: 4px;
+}
+
+.typing-indicator span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-secondary);
+  animation: typing 1.4s infinite;
+}
+
+.typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+.typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing {
+  0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-4px); }
+}

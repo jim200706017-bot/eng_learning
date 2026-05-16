@@ -50,11 +50,13 @@ WebSearch("site:abajournal.com 2026")
 
 ### Step 2: Visit articles (browser-search tool)
 
-For each found URL, scrape content:
+For each found URL, use the browser-search tool to scrape content:
 
 ```
 node C:\Users\HUAWEI\Desktop\AI工具\.trae\skills\browser-search\browser-search-v3.js --scrape <url>
 ```
+
+The tool uses puppeteer to extract article paragraphs from the page.
 
 ### Step 3: Extract keywords
 
@@ -79,11 +81,35 @@ Extract 5-8 keywords per article, annotate CEFR level (A1-C2).
 
 ---
 
+## Finance & Economy
+
+...
+
+---
+
+## Law
+
+...
+
+---
+
+## World News
+
+...
+
+---
+
 ## Today's Word Pool
 
 | Word | Domain | CEFR | Source Article |
 |------|--------|------|----------------|
 | liability | law | B2 | AI Regulation: Who's Liable? |
+| precedent | law | C1 | Supreme Court Ruling on... |
+| algorithm | tech | A2 | New ML Model... |
+| equity | finance | B2 | Market Rally... |
+
+> Enter `add liability` to have Edmund look up the word
+> Enter `/speak` to practice speaking with Charlie
 ```
 
 ---
@@ -100,12 +126,40 @@ Extract 5-8 keywords per article, annotate CEFR level (A1-C2).
 | Saturday | User choice / Mixed |
 | Sunday | No fetch (review day) |
 
+Save to `briefings/<YYYY-MM-DD>-fulltext.md`
+
 ---
 
 ## 5. Keyword → Word Pool
 
-Write to `briefings/daily-word-pool.json`. Victoria reads this for daily recommendations.
+Keywords go into `briefings/daily-word-pool.json`:
+
+```json
+{
+  "date": "2026-05-16",
+  "words": [
+    {"word": "liability", "domain": "law", "cefr": "B2", "source_article": "AI Regulation: Who's Liable?", "url": "https://..."},
+    {"word": "algorithm", "domain": "tech", "cefr": "A2", "source_article": "...", "url": "..."}
+  ]
+}
+```
+
+Victoria reads this file to decide recommended words for the day.
+
+---
 
 ## 6. Source Record
 
-Write to `briefings/<YYYY-MM-DD>-sources.md` after each fetch.
+Write to `briefings/<YYYY-MM-DD>-sources.md` after each fetch:
+
+```markdown
+# Sources — 2026-05-16
+
+## AI
+- [Article 1](https://techcrunch.com/...) — Fetched OK
+- [Article 2](https://technologyreview.com/...) — Fetched OK
+
+## Finance
+- [Article 1](https://reuters.com/...) — Paywall, extracted visible content
+...
+```

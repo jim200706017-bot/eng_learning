@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Secretary</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header id="topbar">
+      <div id="brand">English Secretary</div>
+      <div id="top-actions">
+        <span id="sync-status" title="GitHub sync">○ Local</span>
+        <button id="btn-vocab" title="Vocabulary Library">📖</button>
+        <button id="btn-briefing" title="Today's Briefing">📰</button>
+        <button id="btn-stats" title="Learning Stats">📊</button>
+      </div>
+    </header>
+
+    <div id="main">
+      <!-- Left Sidebar -->
+      <nav id="sidebar">
+        <div id="agents-list">
+          <div class="agent-item active" data-agent="victoria">
+            <span class="agent-icon">🎯</span>
+            <span class="agent-name">Victoria</span>
+            <span class="agent-title">Director</span>
+          </div>
+          <div class="agent-item" data-agent="edmund">
+            <span class="agent-icon">📖</span>
+            <span class="agent-name">Edmund</span>
+            <span class="agent-title">Vocabulary</span>
+          </div>
+          <div class="agent-item" data-agent="charlie">
+            <span class="agent-icon">☕</span>
+            <span class="agent-name">Charlie</span>
+            <span class="agent-title">Speaking</span>
+          </div>
+          <div class="agent-item" data-agent="beatrice">
+            <span class="agent-icon">📰</span>
+            <span class="agent-name">Beatrice</span>
+            <span class="agent-title">News</span>
+          </div>
+        </div>
+        <div id="sidebar-footer">
+          <div id="vocab-summary">Vocabulary: 0 words</div>
+        </div>
+      </nav>
+
+      <!-- Chat Area -->
+      <section id="chat-area">
+        <div id="chat-header">
+          <span id="current-agent">Victoria</span>
+          <span id="current-agent-title">Learning Director</span>
+          <span id="voice-indicator">🔊 ON</span>
+        </div>
+        <div id="messages"></div>
+        <div id="input-area">
+          <button id="btn-voice" title="Voice input">🎤</button>
+          <textarea id="msg-input" rows="1" placeholder="Type your message here... (Enter to send, Shift+Enter for new line)"></textarea>
+          <button id="btn-send" title="Send">➤</button>
+        </div>
+      </section>
+
+      <!-- Right Panel (hidden by default) -->
+      <aside id="right-panel" class="hidden">
+        <div id="panel-header">
+          <span id="panel-title">Vocabulary Library</span>
+          <button id="panel-close">✕</button>
+        </div>
+        <div id="panel-content"></div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

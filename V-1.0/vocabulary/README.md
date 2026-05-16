@@ -1,10 +1,22 @@
-# vocabulary — 词汇库
+# Vocabulary Library
 
-存放每个英语单词的结构化 JSON 词条文件。
+> Auto-generated vocabulary library overview. Run `python vocab-view.py` to refresh.
 
-| 文件 | 用途 |
-|------|------|
-| `index.json` | 总索引：记录每个词的状态、领域、来源、SRS 阶段 |
-| `{word}.json` | 单个词条：释义、例句、词源、TTS 音频路径等 |
+## Summary
 
-由 Edmund 负责查询和写入，Charlie 读取用于口语激活，Victoria 读取用于 SRS 复习调度。
+| Metric | Count |
+|--------|-------|
+| Total Words | 1 |
+| Receptive | 1 |
+| Productive | 0 |
+| Law | 1 |
+
+## All Words
+
+| # | Word | Domain | CEFR | Status | SRS Stage | Next Review | Added |
+|---|------|--------|------|--------|-----------|-------------|-------|
+| 1 | tort | law | — | receptive | 0 | 2026-05-17 | 2026-05-16 |
+
+---
+> Vocabulary JSON files: `vocabulary/<word>.json`
+> Index: `vocabulary/index.json`

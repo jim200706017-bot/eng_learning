@@ -1,0 +1,46 @@
+{
+  "word": "tort",
+  "phonetic": {
+    "uk": "/tɔːt/",
+    "us": "/tɔrt/"
+  },
+  "definitions": [
+    {
+      "partOfSpeech": "noun",
+      "source": "Cambridge",
+      "definition": "An action or inaction that is wrong but can be dealt with in a civil court rather than a criminal court.",
+      "examples": ["He filed a tort claim against the company for negligence."],
+      "cefr": "B2"
+    },
+    {
+      "partOfSpeech": "noun",
+      "source": "Oxford",
+      "definition": "A wrongful act or omission for which damages can be obtained in a civil court by the person wronged, other than a wrong that is only a breach of contract.",
+      "examples": ["The court found the defendant liable in tort for the injuries caused."],
+      "cefr": "B2"
+    },
+    {
+      "partOfSpeech": "noun",
+      "source": "Cornell LII",
+      "definition": "A tort is a civil wrong (other than breach of contract) that causes a claimant to suffer loss or harm, resulting in legal liability for the person who commits the tortious act. Key elements: duty, breach, causation, damages.",
+      "examples": ["Negligence, trespass, defamation, and nuisance are common types of torts."],
+      "legal_types": ["negligence", "trespass", "defamation", "nuisance", "assault", "false imprisonment", "strict liability"]
+    }
+  ],
+  "etymology": {
+    "origin": "Latin 'tortum' (wrong, injustice) — neuter past participle of 'torquere' (to twist)",
+    "path": "Latin torquere (to twist) → Latin tortum (wrong) → Old French tortus (twisted, wrong) → Middle English tort",
+    "brief": "The word 'tort' comes from the Latin 'torquere' meaning 'to twist.' The idea is that a tort is a 'twisting' or distortion of proper behavior — a wrong that deviates from right conduct.",
+    "source": "Etymonline",
+    "related_words": ["torture", "torque", "contort", "extort", "distort", "retort", "tortuous"]
+  },
+  "collocations": ["tort law", "tort claim", "tort reform", "tort liability", "tort action", "intentional tort", "tortfeasor"],
+  "domain": "law",
+  "source": "user-request",
+  "status": "receptive",
+  "srs_stage": 0,
+  "srs_next": "2026-05-17",
+  "added_date": "2026-05-16",
+  "last_reviewed": "2026-05-16",
+  "activated_by_charlie": 0
+}

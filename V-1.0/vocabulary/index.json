@@ -1,1 +1,13 @@
-{}
+{
+  "tort": {
+    "file": "tort.json",
+    "status": "receptive",
+    "domain": "law",
+    "added_date": "2026-05-16",
+    "source": "user-request",
+    "activated_by_charlie": 0,
+    "last_reviewed": "2026-05-16",
+    "srs_stage": 0,
+    "srs_next": "2026-05-17"
+  }
+}

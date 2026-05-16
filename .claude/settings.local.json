@@ -23,7 +23,14 @@
       "Bash(gh api *)",
       "Bash(git --version)",
       "Bash(where git *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(cp 'C:\\\\Users\\\\HUAWEI\\\\.claude\\\\skills\\\\english-tutor.md' 'C:\\\\Users\\\\HUAWEI\\\\Desktop\\\\AI工具\\\\英语学习\\\\V-1.0\\\\skills-backup\\\\')",
+      "Bash(cp 'C:\\\\Users\\\\HUAWEI\\\\.claude\\\\skills\\\\english-edmund.md' 'C:\\\\Users\\\\HUAWEI\\\\Desktop\\\\AI工具\\\\英语学习\\\\V-1.0\\\\skills-backup\\\\')",
+      "Bash(cp 'C:\\\\Users\\\\HUAWEI\\\\.claude\\\\skills\\\\english-charlie.md' 'C:\\\\Users\\\\HUAWEI\\\\Desktop\\\\AI工具\\\\英语学习\\\\V-1.0\\\\skills-backup\\\\')",
+      "Bash(cp 'C:\\\\Users\\\\HUAWEI\\\\.claude\\\\skills\\\\english-beatrice.md' 'C:\\\\Users\\\\HUAWEI\\\\Desktop\\\\AI工具\\\\英语学习\\\\V-1.0\\\\skills-backup\\\\')",
+      "Bash(git remote *)",
+      "Bash(curl *)",
+      "Bash(C:\\\\Users\\\\HUAWEI\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python311\\\\python.exe *)"
     ]
   },
   "mcpServers": {
